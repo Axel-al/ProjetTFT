@@ -6,7 +6,18 @@ class Unit {
     private string $name;
     private int $cost;
     private string $origin;
-    private string $urlImg;
+    private string $url_img;
+
+    public function __construct(?string $id = null, string $name = null, int $cost = null, string $origin = null, string $url_img = null) {
+        if (is_null($id) && is_null($name) && is_null($cost) && is_null($origin) && is_null($url_img)) {
+            return;
+        }
+        $this->id = $id;
+        $this->name = $name;
+        $this->cost = $cost;
+        $this->origin = $origin;
+        $this->url_img = $url_img;
+    }
 
     public function setId(?string $id) : void {
         $this->id = $id;
@@ -40,12 +51,12 @@ class Unit {
         return $this->origin;
     }
 
-    public function setUrlImg(string $urlImg) : void {
-        $this->urlImg = $urlImg;
+    public function setUrl_img(string $url_img) : void {
+        $this->url_img = $url_img;
     }
 
-    public function getUrlImg() : string {
-        return $this->urlImg;
+    public function getUrl_img() : string {
+        return $this->url_img;
     }
 
     public function hydrate(array $data): Character {
