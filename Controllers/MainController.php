@@ -2,17 +2,14 @@
 namespace Controllers;
 
 class MainController {
-    protected \League\Plates\Engine $templates;
+    private \League\Plates\Engine $templates;
 
     public function __construct(\League\Plates\Engine $templates) {
-        $this->setTemplates($templates);
-    }
-
-    public function setTemplates(\League\Plates\Engine $templates) : void {
         $this->templates = $templates;
     }
 
     public function index() : void {
-        echo $this->templates->render('home', ['tftSetName' => 'Remix Rumble']);
-        }
+        $dao = new \Models\UnitDAO();
+        echo $this->templates->render('home', ['tftSetName' => 'Remix Rumble', 'getAll' => $dao->getAll(), 'getByIdQuiExiste' => $dao->getByID('oingroignrgin'), 'getByIdQuiExistePas' => $dao->getByID('rgnrgrgoir')]);
+    }
 }
