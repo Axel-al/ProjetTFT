@@ -2,6 +2,48 @@
 namespace Models;
 
 class UnitDAO extends BasePDODAO {
+    public function __construct() {
+        if (($stmt = $this->execRequest("SELECT COUNT(*) FROM UNIT;")) === false || $stmt->fetch(\PDO::FETCH_ASSOC)['COUNT(*)'] != 63) {
+            $this->execRequest("
+            CREATE TABLE IF NOT EXISTS UNIT (
+                id VARCHAR(13) PRIMARY KEY,
+                name VARCHAR(14) NOT NULL,
+                cost INT NOT NULL,
+                origin VARCHAR(14) NOT NULL,
+                url_img VARCHAR(91) NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;");
+            
+            $data = json_decode(file_get_contents("./data/champs_info.json"), true);
+            
+            $origin_count = [];
+            foreach ($data as $unit) {
+                foreach ($unit['origins'] as $origin) {
+                    if (!isset($origin_count[$origin])) {
+                        $origin_count[$origin] = 0;
+                    }
+                    $origin_count[$origin]++;
+                }
+            }
+
+            foreach ($data as $unit) {
+                if ($stmt !== false && $this->execRequest("SELECT COUNT(*) FROM UNIT WHERE name = :name;", ['name' => $unit['name']])->fetch(\PDO::FETCH_ASSOC)['COUNT(*)'] > 0) {
+                    continue;
+                }
+
+                $selected_origin = $unit['origins'][0];
+                foreach ($unit['origins'] as $origin) {
+                    if ($origin_count[$origin] === 1) {
+                        $selected_origin = $origin;
+                        break;
+                    }
+                }
+
+                $this->execRequest("INSERT INTO UNIT (id, name, cost, origin, url_img) VALUES (:id, :name, :cost, :origin, :url_img);",
+                    ['id' => uniqid(), 'name' => $unit['name'], 'cost' => $unit['cost'], 'origin' => $selected_origin, 'url_img' => $unit['url_img']]);
+            }
+        }
+    }
+
     public function getAll() : array {
         return $this->execRequest("SELECT * FROM UNIT;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit");
     }

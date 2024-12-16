@@ -1,0 +1,1521 @@
+[
+    {
+        "name": "Akali",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "quickstriker"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/akali.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 1
+    },
+    {
+        "name": "Ambessa",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "emissary",
+            "conqueror"
+        ],
+        "classes": [
+            "quickstriker"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/ambessa.jpg?v=61",
+        "health": {
+            "1": 1100,
+            "2": 1980,
+            "3": 3564
+        },
+        "attack_damage": {
+            "1": 65.0,
+            "2": 98.0,
+            "3": 146.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 1
+    },
+    {
+        "name": "Amumu",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "automata"
+        ],
+        "classes": [
+            "watcher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/amumu.jpg?v=61",
+        "health": {
+            "1": 600,
+            "2": 1080,
+            "3": 1944
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Blitzcrank",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "automata"
+        ],
+        "classes": [
+            "dominator"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/blitzcrank.jpg?v=61",
+        "health": {
+            "1": 850,
+            "2": 1530,
+            "3": 2754
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Caitlyn",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "sniper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/caitlyn.jpg?v=61",
+        "health": {
+            "1": 900,
+            "2": 1620,
+            "3": 2916
+        },
+        "attack_damage": {
+            "1": 82.0,
+            "2": 120.0,
+            "3": 180.0
+        },
+        "attack_speed": 0.55,
+        "attack_range": 4
+    },
+    {
+        "name": "Camille",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "ambusher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/camille.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 1
+    },
+    {
+        "name": "Cassiopeia",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "black-rose"
+        ],
+        "classes": [
+            "dominator"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/cassiopeia.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 40.0,
+            "2": 60.0,
+            "3": 90.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Corki",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "scrap"
+        ],
+        "classes": [
+            "artillerist"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/corki.jpg?v=61",
+        "health": {
+            "1": 850,
+            "2": 1530,
+            "3": 2754
+        },
+        "attack_damage": {
+            "1": 65.0,
+            "2": 95.0,
+            "3": 142.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 1
+    },
+    {
+        "name": "Darius",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "conqueror"
+        ],
+        "classes": [
+            "watcher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/darius.jpg?v=61",
+        "health": {
+            "1": 650,
+            "2": 1170,
+            "3": 2106
+        },
+        "attack_damage": {
+            "1": 55.0,
+            "2": 83.0,
+            "3": 124.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 1
+    },
+    {
+        "name": "Dr. Mundo",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "experiment"
+        ],
+        "classes": [
+            "dominator"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/drmundo.jpg?v=61",
+        "health": {
+            "1": 1100,
+            "2": 1980,
+            "3": 3564
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Draven",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "conqueror"
+        ],
+        "classes": [
+            "pit-fighter"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/draven.jpg?v=61",
+        "health": {
+            "1": 500,
+            "2": 900,
+            "3": 1620
+        },
+        "attack_damage": {
+            "1": 55.0,
+            "2": 83.0,
+            "3": 124.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Ekko",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "firelight",
+            "scrap"
+        ],
+        "classes": [
+            "ambusher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/ekko.jpg?v=61",
+        "health": {
+            "1": 1100,
+            "2": 1980,
+            "3": 3564
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.85,
+        "attack_range": 1
+    },
+    {
+        "name": "Elise",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "black-rose"
+        ],
+        "classes": [
+            "bruiser",
+            "form-swapper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/elise.jpg?v=61",
+        "health": {
+            "1": 1100,
+            "2": 1980,
+            "3": 3564
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Ezreal",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "academy",
+            "rebel"
+        ],
+        "classes": [
+            "artillerist"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/ezreal.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Gangplank",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "scrap"
+        ],
+        "classes": [
+            "form-swapper",
+            "pit-fighter"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/gangplank.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 1
+    },
+    {
+        "name": "Garen",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "emissary"
+        ],
+        "classes": [
+            "watcher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/garen.jpg?v=61",
+        "health": {
+            "1": 1000,
+            "2": 1800,
+            "3": 3240
+        },
+        "attack_damage": {
+            "1": 65.0,
+            "2": 98.0,
+            "3": 146.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Heimerdinger",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "academy"
+        ],
+        "classes": [
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/heimerdinger.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 40.0,
+            "2": 60.0,
+            "3": 90.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Illaoi",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "sentinel"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/illaoi.jpg?v=61",
+        "health": {
+            "1": 1100,
+            "2": 1980,
+            "3": 3564
+        },
+        "attack_damage": {
+            "1": 70.0,
+            "2": 105.0,
+            "3": 158.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Irelia",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "sentinel"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/irelia.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Jayce",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "academy"
+        ],
+        "classes": [
+            "form-swapper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/jayce.jpg?v=61",
+        "health": {
+            "1": 1200,
+            "2": 2160,
+            "3": 3888
+        },
+        "attack_damage": {
+            "1": 90.0,
+            "2": 135.0,
+            "3": 203.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 1
+    },
+    {
+        "name": "Jinx",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "ambusher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/jinx.jpg?v=61",
+        "health": {
+            "1": 900,
+            "2": 1620,
+            "3": 2916
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 4
+    },
+    {
+        "name": "Kog'Maw",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "automata"
+        ],
+        "classes": [
+            "sniper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/kogmaw.jpg?v=61",
+        "health": {
+            "1": 650,
+            "2": 1170,
+            "3": 2106
+        },
+        "attack_damage": {
+            "1": 15.0,
+            "2": 23.0,
+            "3": 34.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "LeBlanc",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "black-rose"
+        ],
+        "classes": [
+            "sorcerer"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/leblanc.jpg?v=61",
+        "health": {
+            "1": 900,
+            "2": 1620,
+            "3": 2916
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 4
+    },
+    {
+        "name": "Leona",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "academy"
+        ],
+        "classes": [
+            "sentinel"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/leona.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 55.0,
+            "2": 83.0,
+            "3": 124.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Loris",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "sentinel"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/loris.jpg?v=61",
+        "health": {
+            "1": 850,
+            "2": 1530,
+            "3": 2754
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Lux",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "academy"
+        ],
+        "classes": [
+            "sorcerer"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/lux.jpg?v=61",
+        "health": {
+            "1": 500,
+            "2": 900,
+            "3": 1620
+        },
+        "attack_damage": {
+            "1": 30.0,
+            "2": 45.0,
+            "3": 68.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Maddie",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "sniper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/maddie.jpg?v=61",
+        "health": {
+            "1": 500,
+            "2": 900,
+            "3": 1620
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Malzahar",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "automata"
+        ],
+        "classes": [
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/malzahar.jpg?v=61",
+        "health": {
+            "1": 950,
+            "2": 1710,
+            "3": 3078
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 4
+    },
+    {
+        "name": "Mel",
+        "cost": 6,
+        "rarity": 6,
+        "origins": [
+            "banished-mage"
+        ],
+        "classes": [],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/mel.jpg?v=61",
+        "health": {
+            "1": 1800,
+            "2": 3240,
+            "3": 5832
+        },
+        "attack_damage": {
+            "1": 80.0,
+            "2": 120.0,
+            "3": 180.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 3
+    },
+    {
+        "name": "Mordekaiser",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "conqueror"
+        ],
+        "classes": [
+            "dominator"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/mordekaiser.jpg?v=61",
+        "health": {
+            "1": 1200,
+            "2": 2160,
+            "3": 3888
+        },
+        "attack_damage": {
+            "1": 75.0,
+            "2": 113.0,
+            "3": 169.0
+        },
+        "attack_speed": 0.55,
+        "attack_range": 1
+    },
+    {
+        "name": "Morgana",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "black-rose"
+        ],
+        "classes": [
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/morgana.jpg?v=61",
+        "health": {
+            "1": 500,
+            "2": 900,
+            "3": 1620
+        },
+        "attack_damage": {
+            "1": 30.0,
+            "2": 45.0,
+            "3": 68.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Nami",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "emissary"
+        ],
+        "classes": [
+            "sorcerer"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/nami.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 40.0,
+            "2": 60.0,
+            "3": 90.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Nocturne",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "automata"
+        ],
+        "classes": [
+            "quickstriker"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/nocturne.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 65.0,
+            "2": 98.0,
+            "3": 146.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 1
+    },
+    {
+        "name": "Nunu & Willump",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "experiment"
+        ],
+        "classes": [
+            "bruiser",
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/nunu.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Powder",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "family",
+            "scrap"
+        ],
+        "classes": [
+            "ambusher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/powder.jpg?v=61",
+        "health": {
+            "1": 500,
+            "2": 900,
+            "3": 1620
+        },
+        "attack_damage": {
+            "1": 35.0,
+            "2": 53.0,
+            "3": 79.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Rell",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "conqueror"
+        ],
+        "classes": [
+            "sentinel",
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/rell.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Renata Glasc",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "chem-baron"
+        ],
+        "classes": [
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/renata.jpg?v=61",
+        "health": {
+            "1": 600,
+            "2": 1080,
+            "3": 1944
+        },
+        "attack_damage": {
+            "1": 35.0,
+            "2": 53.0,
+            "3": 79.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Renni",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "chem-baron"
+        ],
+        "classes": [
+            "bruiser"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/renni.jpg?v=61",
+        "health": {
+            "1": 850,
+            "2": 1530,
+            "3": 2754
+        },
+        "attack_damage": {
+            "1": 55.0,
+            "2": 83.0,
+            "3": 124.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Rumble",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "junker-king",
+            "scrap"
+        ],
+        "classes": [
+            "sentinel"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/rumble.jpg?v=61",
+        "health": {
+            "1": 1200,
+            "2": 2160,
+            "3": 3888
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 1
+    },
+    {
+        "name": "Scar",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "firelight"
+        ],
+        "classes": [
+            "watcher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/scar.jpg?v=61",
+        "health": {
+            "1": 850,
+            "2": 1530,
+            "3": 2754
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Sett",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "bruiser"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/sett.jpg?v=61",
+        "health": {
+            "1": 850,
+            "2": 1530,
+            "3": 2754
+        },
+        "attack_damage": {
+            "1": 60.0,
+            "2": 90.0,
+            "3": 135.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Sevika",
+        "cost": 5,
+        "rarity": 5,
+        "origins": [
+            "chem-baron",
+            "high-roller"
+        ],
+        "classes": [
+            "pit-fighter"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/sevika.jpg?v=61",
+        "health": {
+            "1": 1200,
+            "2": 2160,
+            "3": 3888
+        },
+        "attack_damage": {
+            "1": 80.0,
+            "2": 120.0,
+            "3": 180.0
+        },
+        "attack_speed": 0.9,
+        "attack_range": 1
+    },
+    {
+        "name": "Silco",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "chem-baron"
+        ],
+        "classes": [
+            "dominator"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/silco.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 40.0,
+            "2": 60.0,
+            "3": 90.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Singed",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "chem-baron"
+        ],
+        "classes": [
+            "sentinel"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/singed.jpg?v=61",
+        "health": {
+            "1": 650,
+            "2": 1170,
+            "3": 2106
+        },
+        "attack_damage": {
+            "1": 55.0,
+            "2": 83.0,
+            "3": 124.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Smeech",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "chem-baron"
+        ],
+        "classes": [
+            "ambusher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/smeech.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 70.0,
+            "2": 98.0,
+            "3": 146.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 1
+    },
+    {
+        "name": "Steb",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "bruiser"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/steb.jpg?v=61",
+        "health": {
+            "1": 650,
+            "2": 1170,
+            "3": 2106
+        },
+        "attack_damage": {
+            "1": 55.0,
+            "2": 83.0,
+            "3": 124.0
+        },
+        "attack_speed": 0.55,
+        "attack_range": 1
+    },
+    {
+        "name": "Swain",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "conqueror"
+        ],
+        "classes": [
+            "form-swapper",
+            "sorcerer"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/swain.jpg?v=61",
+        "health": {
+            "1": 950,
+            "2": 1710,
+            "3": 3078
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.6,
+        "attack_range": 1
+    },
+    {
+        "name": "Tristana",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "emissary"
+        ],
+        "classes": [
+            "artillerist"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/tristana.jpg?v=61",
+        "health": {
+            "1": 550,
+            "2": 990,
+            "3": 1782
+        },
+        "attack_damage": {
+            "1": 42.0,
+            "2": 63.0,
+            "3": 95.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Trundle",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "scrap"
+        ],
+        "classes": [
+            "bruiser"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/trundle.jpg?v=61",
+        "health": {
+            "1": 650,
+            "2": 1170,
+            "3": 2106
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Twisted Fate",
+        "cost": 3,
+        "rarity": 3,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "quickstriker"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/twistedfate.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 35.0,
+            "2": 53.0,
+            "3": 79.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Twitch",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "experiment"
+        ],
+        "classes": [
+            "sniper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/twitch.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 70.0,
+            "2": 105.0,
+            "3": 158.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Urgot",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "experiment"
+        ],
+        "classes": [
+            "artillerist",
+            "pit-fighter"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/urgot.jpg?v=61",
+        "health": {
+            "1": 700,
+            "2": 1260,
+            "3": 2268
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 2
+    },
+    {
+        "name": "Vander",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "family"
+        ],
+        "classes": [
+            "watcher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/vander.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 75.0,
+            "3": 113.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 1
+    },
+    {
+        "name": "Vex",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "visionary"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/vex.jpg?v=61",
+        "health": {
+            "1": 450,
+            "2": 810,
+            "3": 1458
+        },
+        "attack_damage": {
+            "1": 30.0,
+            "2": 45.0,
+            "3": 68.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Vi",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "enforcer"
+        ],
+        "classes": [
+            "pit-fighter"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/vi.jpg?v=61",
+        "health": {
+            "1": 1100,
+            "2": 1980,
+            "3": 3564
+        },
+        "attack_damage": {
+            "1": 75.0,
+            "2": 113.0,
+            "3": 169.0
+        },
+        "attack_speed": 0.85,
+        "attack_range": 1
+    },
+    {
+        "name": "Viktor",
+        "cost": 6,
+        "rarity": 6,
+        "origins": [
+            "machine-herald"
+        ],
+        "classes": [],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/viktor.jpg?v=61",
+        "health": {
+            "1": 1600,
+            "2": 2880,
+            "3": 5184
+        },
+        "attack_damage": {
+            "1": 100.0,
+            "2": 150.0,
+            "3": 225.0
+        },
+        "attack_speed": 0.55,
+        "attack_range": 4
+    },
+    {
+        "name": "Violet",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "family"
+        ],
+        "classes": [
+            "pit-fighter"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/violet.jpg?v=61",
+        "health": {
+            "1": 650,
+            "2": 1170,
+            "3": 2106
+        },
+        "attack_damage": {
+            "1": 50.0,
+            "2": 60.0,
+            "3": 90.0
+        },
+        "attack_speed": 0.8,
+        "attack_range": 1
+    },
+    {
+        "name": "Vladimir",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "black-rose"
+        ],
+        "classes": [
+            "sorcerer",
+            "watcher"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/vladimir.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.65,
+        "attack_range": 1
+    },
+    {
+        "name": "Warwick",
+        "cost": 6,
+        "rarity": 6,
+        "origins": [
+            "blood-hunter"
+        ],
+        "classes": [],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/warwick.jpg?v=61",
+        "health": {
+            "1": 2100,
+            "2": 3780,
+            "3": 6804
+        },
+        "attack_damage": {
+            "1": 110.0,
+            "2": 150.0,
+            "3": 225.0
+        },
+        "attack_speed": 0.9,
+        "attack_range": 1
+    },
+    {
+        "name": "Zeri",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "firelight"
+        ],
+        "classes": [
+            "sniper"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/zeri.jpg?v=61",
+        "health": {
+            "1": 600,
+            "2": 1080,
+            "3": 1944
+        },
+        "attack_damage": {
+            "1": 45.0,
+            "2": 68.0,
+            "3": 101.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Ziggs",
+        "cost": 2,
+        "rarity": 2,
+        "origins": [
+            "scrap"
+        ],
+        "classes": [
+            "dominator"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/ziggs.jpg?v=61",
+        "health": {
+            "1": 600,
+            "2": 1080,
+            "3": 1944
+        },
+        "attack_damage": {
+            "1": 35.0,
+            "2": 53.0,
+            "3": 79.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    },
+    {
+        "name": "Zoe",
+        "cost": 4,
+        "rarity": 4,
+        "origins": [
+            "rebel"
+        ],
+        "classes": [
+            "sorcerer"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/zoe.jpg?v=61",
+        "health": {
+            "1": 800,
+            "2": 1440,
+            "3": 2592
+        },
+        "attack_damage": {
+            "1": 40.0,
+            "2": 60.0,
+            "3": 90.0
+        },
+        "attack_speed": 0.75,
+        "attack_range": 4
+    },
+    {
+        "name": "Zyra",
+        "cost": 1,
+        "rarity": 1,
+        "origins": [
+            "experiment"
+        ],
+        "classes": [
+            "sorcerer"
+        ],
+        "url_img": "https://cdn.mobalytics.gg/assets/tft/images/champions/thumbnail/set13/zyra.jpg?v=61",
+        "health": {
+            "1": 500,
+            "2": 900,
+            "3": 1620
+        },
+        "attack_damage": {
+            "1": 30.0,
+            "2": 45.0,
+            "3": 68.0
+        },
+        "attack_speed": 0.7,
+        "attack_range": 4
+    }
+]

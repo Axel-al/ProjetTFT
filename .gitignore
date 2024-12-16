@@ -1,9 +1,12 @@
-# Ignorer le répertoire .vscode
+# Ignore the directory .vscode
 .vscode/
 
-# Ignorer le fichier /Config/dev.ini
+# Ignore the file /Config/dev.ini
 /Config/dev.ini
 
-# Ignorer tous les fichiers PDF et Markdown commençant par "tp"
+# Ignore all PDF and Markdown files beginning by "tp"
 tp*.pdf
 tp*.md
+
+# Ignore all JPG files in /public/img/
+/public/img/*.jpg

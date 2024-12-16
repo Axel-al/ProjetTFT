@@ -17,11 +17,11 @@ class Unit {
     }
 
     public function setName(string $id) : void {
-        $this->Name = $Name;
+        $this->Name = $name;
     }
 
     public function getName() : string {
-        return $this->Name;
+        return $this->name;
     }
 
     public function setCost(int $cost) : void {
