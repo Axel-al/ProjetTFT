@@ -1,4 +1,11 @@
-<?php $this->layout('template', ['title' => 'TP TFT']) ?>
+<?php $this->layout('template', [
+    'title' => 'TP TFT',
+    'home' => strtok($_SERVER["REQUEST_URI"], '?'),
+    'addUnit' => '?action=add-unit',
+    'addUnitOrigin' => '?action=add-unit-origin',
+    'search' => '?action=search'
+]) ?>
+
 <h1 class="text-center my-4">TFT - Set <?= $this->e($tftSetName) ?></h1>
 
 <div class="container">
@@ -13,8 +20,8 @@
                     <img src="<?= $unit->getUrl_img() ?>" class="card-img-top" alt="<?= $unit->getName() ?>">
                     <div class="card-body">
                         <div class="card-buttons">
-                            <img src="./public/img/edit-icon.png" alt="Edit" class="button-icon mb-2">
-                            <img src="./public/img/delete-icon.png" alt="Delete" class="button-icon">
+                            <a href="<?= $editUnit . $unit->getId() ?>"><img src="./public/img/edit-icon.png" alt="Edit" class="button-icon mb-2"></a>
+                            <a href="<?= $delUnit . $unit->getId() ?>"><img src="./public/img/delete-icon.png" alt="Delete" class="button-icon"></a>
                         </div>
                         <h5 class="card-title"><?= $unit->getName() ?></h5>
                         <p class="card-text"><strong>Cost:</strong> <?= $unit->getCost() ?></p>

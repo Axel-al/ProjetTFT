@@ -1,7 +1,7 @@
 # Ignore the directory .vscode
 .vscode/
 
-# Ignore the file /Config/dev.ini
+# Ignore the /Config/dev.ini file
 /Config/dev.ini
 
 # Ignore all PDF and Markdown files beginning by "tp"

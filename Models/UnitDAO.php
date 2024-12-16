@@ -3,7 +3,7 @@ namespace Models;
 
 class UnitDAO extends BasePDODAO {
     public function __construct() {
-        if (($stmt = $this->execRequest("SELECT COUNT(*) FROM UNIT;")) === false || $stmt->fetch(\PDO::FETCH_ASSOC)['COUNT(*)'] != 63) {
+        if (($stmt = $this->execRequest("SELECT COUNT(*) FROM UNIT;")) === false || $stmt->fetch(\PDO::FETCH_ASSOC)['COUNT(*)'] === 0) {
             $this->execRequest("
             CREATE TABLE IF NOT EXISTS UNIT (
                 id VARCHAR(13) PRIMARY KEY,
@@ -26,10 +26,6 @@ class UnitDAO extends BasePDODAO {
             }
 
             foreach ($data as $unit) {
-                if ($stmt !== false && $this->execRequest("SELECT COUNT(*) FROM UNIT WHERE name = :name;", ['name' => $unit['name']])->fetch(\PDO::FETCH_ASSOC)['COUNT(*)'] > 0) {
-                    continue;
-                }
-
                 $selected_origin = $unit['origins'][0];
                 foreach ($unit['origins'] as $origin) {
                     if ($origin_count[$origin] === 1) {
@@ -45,13 +41,37 @@ class UnitDAO extends BasePDODAO {
     }
 
     public function getAll() : array {
-        return $this->execRequest("SELECT * FROM UNIT;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit");
+        return $this->downloadImages($this->execRequest("SELECT * FROM UNIT;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit"));
     }
 
     public function getByID(string $idUnit) : ?Unit {
         $stmt = $this->execRequest("SELECT * FROM UNIT WHERE id = :id;", ["id" => $idUnit]);
         $stmt->setFetchMode(\PDO::FETCH_CLASS, "\Models\Unit");
         $unitObj = $stmt->fetch();
-        return !$unitObj ? null : $unitObj;
+        return !$unitObj ? null : $this->downloadImages(array($unitObj))[0];
+    }
+
+    private function downloadImages(array $listUnits) : array {
+        $path_dir = "./public/img/";
+        if (!is_dir($path_dir)) {
+            mkdir($path_dir);
+        }
+        foreach ($listUnits as $unit) {
+            $url = $unit->getUrl_img();
+            $imagePath = "./public/img/" . basename(parse_url($url, PHP_URL_PATH));
+            $unit->setUrl_img($imagePath);
+            if (file_exists($imagePath)) {
+                continue;
+            }
+            $ch = curl_init($url);
+            $file = fopen($imagePath, 'w');
+            curl_setopt_array($ch, [CURLOPT_FILE => $file, CURLOPT_FOLLOWLOCATION => true, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false]);
+            if (curl_exec($ch) === false) {
+                echo "<!--Curl error : " . curl_error($ch) . "-->";
+            }
+            curl_close($ch);
+            fclose($file);
+        }
+        return $listUnits;
     }
 }

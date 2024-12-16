@@ -11,10 +11,42 @@
 
 <body>
 <header>
-    <!-- Menu -->
-    <nav>
-
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="<?= $this->e($home) ?>">TFT Manager</a>
+            <button id="menuToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $this->e($home) ?>">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $addUnit ?>">Add a unit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $addUnitOrigin ?>">Add a unit's origin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $search ?>">Search</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
+    <div class="mobile-menu">
+        <div id="mobileNav" class="mobile-nav bg-dark">
+            <button id="closeMenu" class="btn btn-danger">Fermer</button>
+            <ul class="list-unstyled">
+                <li><a href="<?= $this->e($home) ?>">Home</a></li>
+                <li><a href="<?= $addUnit ?>">Add a unit</a></li>
+                <li><a href="<?= $addUnitOrigin ?>">Add a unit's origin</a></li>
+                <li><a href="<?= $search ?>">Search</a></li>
+            </ul>
+        </div>
+    </div>
 </header>
 <main id="contenu">
 <?=$this->section('content')?>
@@ -22,6 +54,23 @@
 <footer>
 
 </footer>
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMenu = document.getElementById('closeMenu');
+
+    menuToggle.addEventListener('click', () => {
+        if (mobileNav.classList.contains("show")) {
+            mobileNav.classList.remove('show')
+        } else {
+            mobileNav.classList.add('show');
+        }
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileNav.classList.remove('show');
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
