@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?= $this->e($home) ?>">TFT Manager</a>
-            <button id="menuToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="menuToggle" class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -58,12 +58,15 @@
     const menuToggle = document.getElementById('menuToggle');
     const mobileNav = document.getElementById('mobileNav');
     const closeMenu = document.getElementById('closeMenu');
+    const burger = menuToggle.querySelector('.navbar-toggler-icon');
 
     menuToggle.addEventListener('click', () => {
         if (mobileNav.classList.contains("show")) {
             mobileNav.classList.remove('show')
+            burger.classList.remove('active')
         } else {
             mobileNav.classList.add('show');
+            burger.classList.add('active');
         }
     });
 

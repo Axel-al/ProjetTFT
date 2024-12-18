@@ -26,6 +26,10 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28255, 255, 255' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.navbar-toggler-icon.active {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28255, 255, 255' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 4L26 26M26 4L4 26'/%3e%3c/svg%3e");
+}
+
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -66,14 +70,23 @@ body {
 }
 
 @media (max-width: 992px) {
-    .navbar-collapse {
-        display: none;
-    }
-
     .mobile-nav {
         display: block;
     }
 }
+
+@media (min-width: 1700px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 1850px) {
+    .container {
+        max-width: 1760px;
+    }
+}
+
 
 .card {
     border: none;

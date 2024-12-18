@@ -13,7 +13,7 @@
     <div class="search-container text-center mb-4">
         <input type="text" id="search" class="form-control" placeholder="Search units..." />
     </div>
-    <div id="units-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div id="units-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4">
         <?php foreach ($listUnits as $unit): ?>
             <div class="col unit-card">
                 <div class="card shadow-sm">
