@@ -9,10 +9,10 @@ class RouteIndex extends \Controllers\Router\Route {
     }
 
     public function get(array $params = array()) : void {
-        $this->controler->index();
+        $this->controler->index($params);
     }
 
     public function post(array $params = array()) : void {
-        $this->controler->index();
+        $this->controler->index($params);
     }
 }

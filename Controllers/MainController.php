@@ -8,11 +8,15 @@ class MainController {
         $this->templates = $templates;
     }
 
-    public function index() : void {
+    public function index(array $params) : void {
         $listUnits = (new \Models\UnitDAO())->getAll();
-        echo $this->templates->render('home', [
+        echo $this->templates->render('home', array_merge([
             'tftSetName' => 'Into the Arcane',
             'listUnits' => $listUnits
-        ]);
+        ], $params));
+    }
+
+    public function search(array $params) : void {
+        echo $this->templates->render('search', $params);
     }
 }

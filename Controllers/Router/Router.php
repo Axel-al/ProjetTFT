@@ -22,7 +22,10 @@ class Router {
     private function createRouteList() : void {
         $this->routeList = [
             "index" => new \Controllers\Router\Route\RouteIndex($this->ctrlList['main']),
-            "add-unit" => new \Controllers\Router\Route\RouteAddUnit($this->ctrlList['unit'])
+            "add-unit" => new \Controllers\Router\Route\RouteAddUnit($this->ctrlList['unit']),
+            "search" => new \Controllers\Router\Route\RouteSearch($this->ctrlList['main']),
+            "add-origin" => new \Controllers\Router\Route\RouteAddOrigin($this->ctrlList['unit']),
+            "del-unit" => new \Controllers\Router\Route\RouteDelUnit($this->ctrlList['unit']),
         ];
     }
 

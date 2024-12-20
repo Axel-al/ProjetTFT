@@ -1,6 +1,6 @@
 <?php $home = strtok($_SERVER["REQUEST_URI"], '?') ?>
 <?php $addUnit = '?action=add-unit' ?>
-<?php $addUnitOrigin = '?action=add-unit-origin' ?>
+<?php $addUnitOrigin = '?action=add-origin' ?>
 <?php $search = '?action=search' ?>
 <!doctype html>
 <html lang="en">
@@ -17,14 +17,14 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?= $this->e($home) ?>">TFT Manager</a>
+            <a class="navbar-brand" href="<?= $home ?>">TFT Manager</a>
             <button id="menuToggle" class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $this->e($home) ?>">Home</a>
+                        <a class="nav-link" href="<?= $home ?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $addUnit ?>">Add a unit</a>
@@ -44,7 +44,7 @@
         <div id="mobileNav" class="mobile-nav bg-dark">
             <button id="closeMenu" class="btn btn-danger">Fermer</button>
             <ul class="list-unstyled">
-                <li><a href="<?= $this->e($home) ?>">Home</a></li>
+                <li><a href="<?= $home ?>">Home</a></li>
                 <li><a href="<?= $addUnit ?>">Add a unit</a></li>
                 <li><a href="<?= $addUnitOrigin ?>">Add a unit's origin</a></li>
                 <li><a href="<?= $search ?>">Search</a></li>

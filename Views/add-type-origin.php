@@ -1,1 +1,0 @@
-<h1>Add Type Origin</h1>

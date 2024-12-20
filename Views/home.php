@@ -4,9 +4,15 @@
 
 <div class="container">
     <h2 class="my-4">Units:</h2>
-    <div class="search-container text-center mb-4">
-        <input type="text" id="search" class="form-control" placeholder="Search units..." />
-    </div>
+    <form class="search-container mb-4">
+        <input type="hidden" name="action" value="search">
+        <div action="" method="get" class="input-group">
+            <input type="text" name="query" id="search" class="form-control" placeholder="Search units..." />
+            <button type="submit" class="btn btn-outline-secondary" type="button" id="search-button">
+                <img src="./public/img/search-icon.png" alt="Search" class="button-icon">
+            </button>
+        </div>
+    </form>
     <div id="units-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4">
         <?php foreach ($listUnits as $unit): ?>
             <div class="col unit-card">
@@ -26,4 +32,3 @@
         <?php endforeach ?>
     </div>
 </div>
-<script src="./public/js/searchFilter.js"></script>
