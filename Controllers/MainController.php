@@ -12,9 +12,7 @@ class MainController {
         $listUnits = (new \Models\UnitDAO())->getAll();
         echo $this->templates->render('home', [
             'tftSetName' => 'Into the Arcane',
-            'listUnits' => $listUnits,
-            'delUnit' => '?action=del-unit&id=',
-            'editUnit' => '?action=edit-unit&id='
+            'listUnits' => $listUnits
         ]);
     }
 }

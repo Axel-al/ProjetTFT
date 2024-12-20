@@ -67,7 +67,7 @@ class UnitDAO extends BasePDODAO {
             $file = fopen($imagePath, 'w');
             curl_setopt_array($ch, [CURLOPT_FILE => $file, CURLOPT_FOLLOWLOCATION => true, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false]);
             if (curl_exec($ch) === false) {
-                echo "<!--Curl error : " . curl_error($ch) . "-->";
+                trigger_error("Curl error : " . curl_error($ch));
             }
             curl_close($ch);
             fclose($file);

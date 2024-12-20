@@ -1,3 +1,7 @@
+<?php $home = strtok($_SERVER["REQUEST_URI"], '?') ?>
+<?php $addUnit = '?action=add-unit' ?>
+<?php $addUnitOrigin = '?action=add-unit-origin' ?>
+<?php $search = '?action=search' ?>
 <!doctype html>
 <html lang="en">
 
