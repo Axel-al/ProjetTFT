@@ -29,7 +29,3 @@ Ce projet est une application de gestion pour le jeu Teamfight Tactics (TFT). Il
 ## Auteurs
 
 - Axel Alabéatrix
-
-## Licence
-
-Ce projet est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
