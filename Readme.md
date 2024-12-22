@@ -24,12 +24,11 @@ Ce projet est une application de gestion pour le jeu Teamfight Tactics (TFT). Il
 ## Dépendances
 
 - PHP
-- Composer
 - WAMP (ou tout autre serveur web local)
 
 ## Auteurs
 
-- [Votre Nom]
+- Axel Alabéatrix
 
 ## Licence
 
