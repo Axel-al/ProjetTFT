@@ -3,18 +3,16 @@
 <h1 class="text-center my-4">TFT - Set <?= $this->e($tftSetName) ?></h1>
 
 <div class="container">
-    <h2 class="my-4">Units:</h2>
+    <h2 class="my-4"><?= isset($defaultSearch) ? "Results" : "Units" ?>:</h2>
     <form action="" method="get" class="search-container mb-4 form-inline">
-        <input type="hidden" name="action" value="search">
+        <input type="hidden" name="action" value="result-search">
         <div class="input-group">
             <select class="form-select" name="attribute" id="attribute">
-                <?php foreach ($attributes as $attribute): ?>
-                    <?php if ($attribute->getName() !== 'id'): ?>
-                        <option value="<?= $attribute->getName() ?>"><?= ucfirst($attribute->getName()) ?></option>
-                    <?php endif; ?>
+                <?php foreach ($attributes as $attribute): ?>*
+                    <option value="<?= $attribute->getName() ?>"<?= isset($defaultSearch) && ($defaultSearch['attribute'] == $attribute->getName()) ? " selected" : null ?>><?= ucfirst($attribute->getName()) ?></option>
                 <?php endforeach; ?>
             </select>
-            <input type="text" name="query" id="search" class="form-control" placeholder="Search units..." />
+            <input type="text" name="query" id="search" class="form-control" placeholder="Search units..." value="<?= isset($defaultSearch) ? $defaultSearch['query'] : null ?>" required>
             <button type="submit" class="btn btn-outline-secondary" id="search-button">
                 <img src="./public/img/search-icon.png" alt="Search" class="button-icon">
             </button>

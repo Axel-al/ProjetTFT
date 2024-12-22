@@ -7,11 +7,11 @@ class UnitDAO extends BasePDODAO {
     }
 
     public function getAll() : array {
-        $Units = \Helpers\Utils::downloadImages($this->execRequest("SELECT * FROM UNIT ORDER BY name;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit"));
+        $Units = $this->execRequest("SELECT * FROM UNIT ORDER BY name;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit");
         foreach ($Units as $unit) {
             $unit->setOrigins((new \Models\OriginDAO())->getOriginsForUnit($unit->getId()));
         }
-        return $Units;
+        return \Helpers\Utils::downloadImages($Units);
     }
 
     public function getByID(string $idUnit) : ?Unit {
@@ -114,5 +114,30 @@ class UnitDAO extends BasePDODAO {
         }
 
         return $this->execRequest("SELECT COUNT(*) FROM UNIT WHERE id = :id;", ["id" => $unit->getId()])->fetchColumn() > 0;
+    }
+
+    public function search(string $search, string $attribute = 'name') : array {
+        if ($search === '') {
+            return $this->getAll();
+        }
+        try {
+            $error = new \PDOException("Error while searching unit");
+            if ($attribute != 'origins') {
+                $stmt = $this->execRequest("SELECT * FROM UNIT WHERE $attribute LIKE :search ORDER BY $attribute;", ["search" => "%$search%"], $error);
+            } else {
+                $stmt = $this->execRequest("SELECT * FROM UNIT WHERE id IN (SELECT id_unit FROM UNITORIGIN JOIN ORIGIN ON id_origin = ORIGIN.id WHERE name LIKE :search) ORDER BY name;", ["search" => "%$search%"], $error);
+            }
+            
+            if ($stmt === false) {
+                throw $error;
+            }
+        } catch (\PDOException $e) {
+            throw new \Exception("Error while searching unit: " . $e);
+        }
+        $Units = $stmt->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit");
+        foreach ($Units as $unit) {
+            $unit->setOrigins((new \Models\OriginDAO())->getOriginsForUnit($unit->getId()));
+        }
+        return \Helpers\Utils::downloadImages($Units);
     }
 }

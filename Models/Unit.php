@@ -2,8 +2,8 @@
 namespace Models;
 
 class Unit {
-    private ?string $id;
     private string $name;
+    private ?string $id;
     private int $cost;
     private array $origins;
     private string $url_img;

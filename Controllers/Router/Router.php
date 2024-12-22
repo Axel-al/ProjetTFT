@@ -27,13 +27,14 @@ class Router {
             "search" => new \Controllers\Router\Route\RouteSearch($this->ctrlList['main']),
             "add-origin" => new \Controllers\Router\Route\RouteAddOrigin($this->ctrlList['origin']),
             "del-unit" => new \Controllers\Router\Route\RouteDelUnit($this->ctrlList['unit']),
-            "edit-unit" => new \Controllers\Router\Route\RouteEditUnit($this->ctrlList['unit'])
+            "edit-unit" => new \Controllers\Router\Route\RouteEditUnit($this->ctrlList['unit']),
+            "result-search" => new \Controllers\Router\Route\RouteResultSearch($this->ctrlList['main'])
         ];
     }
 
     public function routing(array $get, array $post) : void {
-        if (isset($get['action'])) {
-            $route = $this->routeList[$get['action']];
+        if (isset($get[$this->action_key]) && isset($this->routeList[$get[$this->action_key]])) {
+            $route = $this->routeList[$get[$this->action_key]];
         } else {
             $route = $this->routeList['index'];
         }

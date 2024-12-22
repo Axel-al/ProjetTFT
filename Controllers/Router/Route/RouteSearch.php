@@ -13,6 +13,6 @@ class RouteSearch extends \Controllers\Router\Route {
     }
     
     public function post(array $params = array()) : void {
-        $this->controler->search();        
+        $this->controler->search("Error: Method POST not allowed");
     }
 }
