@@ -15,7 +15,8 @@ class Router {
     private function createControllerList() : void {
         $this->ctrlList = [
             "main" => new \Controllers\MainController(new \League\Plates\Engine('./Views/')),
-            "unit" => new \Controllers\UnitController(new \League\Plates\Engine('./Views/'))
+            "unit" => new \Controllers\UnitController(new \League\Plates\Engine('./Views/')),
+            "origin" => new \Controllers\OriginController(new \League\Plates\Engine('./Views/'))
         ];
     }
 
@@ -24,18 +25,18 @@ class Router {
             "index" => new \Controllers\Router\Route\RouteIndex($this->ctrlList['main']),
             "add-unit" => new \Controllers\Router\Route\RouteAddUnit($this->ctrlList['unit']),
             "search" => new \Controllers\Router\Route\RouteSearch($this->ctrlList['main']),
-            "add-origin" => new \Controllers\Router\Route\RouteAddOrigin($this->ctrlList['unit']),
+            "add-origin" => new \Controllers\Router\Route\RouteAddOrigin($this->ctrlList['origin']),
             "del-unit" => new \Controllers\Router\Route\RouteDelUnit($this->ctrlList['unit']),
+            "edit-unit" => new \Controllers\Router\Route\RouteEditUnit($this->ctrlList['unit'])
         ];
     }
 
     public function routing(array $get, array $post) : void {
-        if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($get['action'])) {
-            $this->routeList[$get['action']]->action($get, 'GET');
-        } else if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($post['action'])) {
-            $this->routeList[$post['action']]->action($post, 'POST');
+        if (isset($get['action'])) {
+            $route = $this->routeList[$get['action']];
         } else {
-            $this->routeList['index']->action();
+            $route = $this->routeList['index'];
         }
+        $route->action($_SERVER['REQUEST_METHOD'] == 'GET' ? $get : $post, $_SERVER['REQUEST_METHOD']);
     }
 }

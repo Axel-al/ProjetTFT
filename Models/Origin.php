@@ -1,21 +1,20 @@
 <?php
 namespace Models;
 
-class Unit {
-    private ?string $id;
+class Origin {
+    private ?int $id;
     private string $name;
-    private int $cost;
-    private array $origins;
     private string $url_img;
 
-    public function setId(?string $id) : void {
-        if ($id === null) {
-            $id = uniqid();
-        }
+    public function __construct(array $data = array()) {
+        $this->hydrate($data);
+    }
+
+    public function setId(?int $id) : void {
         $this->id = $id;
     }
 
-    public function getId() : ?string {
+    public function getId() : ?int {
         return $this->id;
     }
 
@@ -27,22 +26,6 @@ class Unit {
         return $this->name;
     }
 
-    public function setCost(int $cost) : void {
-        $this->cost = $cost;
-    }
-
-    public function getCost() : int {
-        return $this->cost;
-    }
-
-    public function setOrigins(array $origins) : void {
-        $this->origins = $origins;
-    }
-
-    public function getOrigins() : array {
-        return $this->origins;
-    }
-
     public function setUrl_img(string $url_img) : void {
         $this->url_img = $url_img;
     }
@@ -51,7 +34,7 @@ class Unit {
         return $this->url_img;
     }
 
-    public function hydrate(array $data) : Unit {
+    public function hydrate(array $data) : Origin {
         foreach ($data as $key => $value) {
             $method = "set" . ucfirst($key);
             if (method_exists($this, $method)) {

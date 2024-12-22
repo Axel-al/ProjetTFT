@@ -3,75 +3,116 @@ namespace Models;
 
 class UnitDAO extends BasePDODAO {
     public function __construct() {
-        if (($stmt = $this->execRequest("SELECT COUNT(*) FROM UNIT;")) === false || $stmt->fetch(\PDO::FETCH_ASSOC)['COUNT(*)'] === 0) {
-            $this->execRequest("
-            CREATE TABLE IF NOT EXISTS UNIT (
-                id VARCHAR(13) PRIMARY KEY,
-                name VARCHAR(14) NOT NULL,
-                cost INT NOT NULL,
-                origin VARCHAR(14) NOT NULL,
-                url_img VARCHAR(91) NOT NULL
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;");
-            
-            $data = json_decode(file_get_contents("./data/champs_info.json"), true);
-            
-            $origin_count = [];
-            foreach ($data as $unit) {
-                foreach ($unit['origins'] as $origin) {
-                    if (!isset($origin_count[$origin])) {
-                        $origin_count[$origin] = 0;
-                    }
-                    $origin_count[$origin]++;
-                }
-            }
-
-            foreach ($data as $unit) {
-                $selected_origin = $unit['origins'][0];
-                foreach ($unit['origins'] as $origin) {
-                    if ($origin_count[$origin] === 1) {
-                        $selected_origin = $origin;
-                        break;
-                    }
-                }
-
-                $this->execRequest("INSERT INTO UNIT (id, name, cost, origin, url_img) VALUES (:id, :name, :cost, :origin, :url_img);",
-                    ['id' => uniqid(), 'name' => $unit['name'], 'cost' => $unit['cost'], 'origin' => $selected_origin, 'url_img' => $unit['url_img']]);
-            }
-        }
+        (new \Models\DatabaseInitializer())->init();
     }
 
     public function getAll() : array {
-        return $this->downloadImages($this->execRequest("SELECT * FROM UNIT;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit"));
+        $Units = \Helpers\Utils::downloadImages($this->execRequest("SELECT * FROM UNIT ORDER BY name;")->fetchAll(\PDO::FETCH_CLASS, "\Models\Unit"));
+        foreach ($Units as $unit) {
+            $unit->setOrigins((new \Models\OriginDAO())->getOriginsForUnit($unit->getId()));
+        }
+        return $Units;
     }
 
     public function getByID(string $idUnit) : ?Unit {
         $stmt = $this->execRequest("SELECT * FROM UNIT WHERE id = :id;", ["id" => $idUnit]);
         $stmt->setFetchMode(\PDO::FETCH_CLASS, "\Models\Unit");
-        $unitObj = $stmt->fetch();
-        return !$unitObj ? null : $this->downloadImages(array($unitObj))[0];
+        $unit = $stmt->fetch();
+        $unit?->setOrigins((new \Models\OriginDAO())->getOriginsForUnit($unit->getId()));
+        return !$unit ? null : $unit;
     }
 
-    private function downloadImages(array $listUnits) : array {
-        $path_dir = "./public/img/";
-        if (!is_dir($path_dir)) {
-            mkdir($path_dir);
+    public function createUnit(Unit $unit) : void {
+        $error = new \PDOException("Error while creating unit");
+        $stmt = $this->execRequest("INSERT INTO UNIT (id, name, cost, url_img) VALUES (:id, :name, :cost, :url_img);",
+            ['id' => $unit->getId(), 'name' => $unit->getName(), 'cost' => $unit->getCost(), 'url_img' => $unit->getUrl_img()], $error);
+        if ($stmt === false) {
+            throw $error;
         }
-        foreach ($listUnits as $unit) {
-            $url = $unit->getUrl_img();
-            $imagePath = "./public/img/" . basename(parse_url($url, PHP_URL_PATH));
-            $unit->setUrl_img($imagePath);
-            if (file_exists($imagePath)) {
-                continue;
+
+        try {
+            $origins = $unit->getOrigins();
+            if ($origins !== null) {
+                $error = new \PDOException("Error while creating unit origins");
+                foreach ($origins as $origin) {
+                    $stmt = $this->execRequest("INSERT INTO UNITORIGIN (id_unit, id_origin) VALUES (:id_unit, :id_origin);",
+                        ['id_unit' => $unit->getId(), 'id_origin' => $origin->getId()], $error);
+                    if ($stmt === false) {
+                        throw $error;
+                    }
+                }
+            } else {
+                throw new \Exception("Error while creating unit: no origins provided");
             }
-            $ch = curl_init($url);
-            $file = fopen($imagePath, 'w');
-            curl_setopt_array($ch, [CURLOPT_FILE => $file, CURLOPT_FOLLOWLOCATION => true, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false]);
-            if (curl_exec($ch) === false) {
-                trigger_error("Curl error : " . curl_error($ch));
-            }
-            curl_close($ch);
-            fclose($file);
+        } catch (\Exception $e) {
+            $this->deleteUnit($unit->getId());
+            throw $e;
+        } catch (\Error $e) {
+            throw new \Exception("Error while updating unit: no origins provided");
         }
-        return $listUnits;
+    }
+
+    public function deleteUnit(string $idUnit = '-1') : int {
+        $error = new \PDOException("Error while deleting unit");
+        $stmt = $this->execRequest("DELETE FROM UNIT WHERE id = :id;", ["id" => $idUnit], $error);
+        if ($stmt === false) {
+            throw $error;
+        }
+        return $stmt->rowCount();
+    }
+
+    public function updateUnit(Unit $unit) : bool {
+        $error = new \PDOException("Error while updating unit");
+        $stmt = $this->execRequest("UPDATE UNIT SET name = :name, cost = :cost, url_img = :url_img WHERE id = :id;",
+            ['id' => $unit->getId(), 'name' => $unit->getName(), 'cost' => $unit->getCost(), 'url_img' => $unit->getUrl_img()], $error);
+        if ($stmt === false) {
+            throw $error;
+        }
+        
+        try {
+            $lastOrigins = (new \Models\OriginDAO())->getOriginsForUnit($unit->getId());
+        } catch (\Exception $e) {
+            $lastOrigins = [];
+        }
+
+        try {
+            $origins = $unit->getOrigins();
+            if ($origins === array()) {
+                throw new \Exception("Error while updating unit: origins were empty");
+            }
+            $error = new \PDOException("Error while updating unit origins");
+            if ($this->execRequest("DELETE FROM UNITORIGIN WHERE id_unit = :id_unit;", ['id_unit' => $unit->getId()], $error) === false) {
+                throw $error;
+            }
+        } catch (\Exception $e) {
+            throw $e;
+        } catch (\Error $e) {
+            throw new \Exception("Error while updating unit: " . $e);
+        }
+
+        try {
+            foreach ($origins as $origin) {
+                if (!is_object($origin) || !method_exists($origin, 'getId')) {
+                    throw new \Exception("Error while updating unit: Origin is not an object or does not have an id");
+                }
+                $stmt = $this->execRequest("INSERT INTO UNITORIGIN (id_unit, id_origin) VALUES (:id_unit, :id_origin);",
+                    ['id_unit' => $unit->getId(), 'id_origin' => $origin->getId()], $error);
+                if ($stmt === false) {
+                    throw $error;
+                }
+            }
+        } catch (\Exception $e) {
+            $error = new \PDOException("Error while restauring unit origins");
+            foreach ($lastOrigins as $origin) {
+                $stmt = $this->execRequest("INSERT INTO UNITORIGIN (id_unit, id_origin) VALUES (:id_unit, :id_origin);",
+                    ['id_unit' => $unit->getId(), 'id_origin' => $origin->getId()], $error);
+                if ($stmt === false) {
+                    throw $error;
+                }
+            }
+            throw $e;
+        }
+
+        return $this->execRequest("SELECT COUNT(*) FROM UNIT WHERE id = :id;", ["id" => $unit->getId()])->fetchColumn() > 0;
     }
 }

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<?= $this->insert('message', ['message' => $message ?? null]) ?>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">

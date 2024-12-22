@@ -1,0 +1,150 @@
+[
+    {
+        "name": "rebel",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/rebel.png",
+        "breaks": [
+            3,
+            5,
+            7,
+            1
+        ]
+    },
+    {
+        "name": "enforcer",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/enforcer.png",
+        "breaks": [
+            2,
+            4,
+            6,
+            8,
+            1
+        ]
+    },
+    {
+        "name": "scrap",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/scrap.png",
+        "breaks": [
+            2,
+            4,
+            6,
+            9
+        ]
+    },
+    {
+        "name": "conqueror",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/conqueror.png",
+        "breaks": [
+            2,
+            4,
+            6,
+            9
+        ]
+    },
+    {
+        "name": "chem-baron",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/chem-baron.png",
+        "breaks": [
+            3,
+            4,
+            5,
+            6,
+            7
+        ]
+    },
+    {
+        "name": "academy",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/academy.png",
+        "breaks": [
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    {
+        "name": "experiment",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/experiment.png",
+        "breaks": [
+            3,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "automata",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/automata.png",
+        "breaks": [
+            2,
+            4,
+            6
+        ]
+    },
+    {
+        "name": "black-rose",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/black-rose.png",
+        "breaks": [
+            1
+        ]
+    },
+    {
+        "name": "emissary",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/emissary.png",
+        "breaks": [
+            1,
+            4
+        ]
+    },
+    {
+        "name": "firelight",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/firelight.png",
+        "breaks": [
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "name": "family",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/family.png",
+        "breaks": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "name": "banished-mage",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/banished-mage.png",
+        "breaks": [
+            1
+        ]
+    },
+    {
+        "name": "machine-herald",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/machine-herald.png",
+        "breaks": [
+            1
+        ]
+    },
+    {
+        "name": "junker-king",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/junker-king.png",
+        "breaks": [
+            1
+        ]
+    },
+    {
+        "name": "high-roller",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/high-roller.png",
+        "breaks": [
+            1
+        ]
+    },
+    {
+        "name": "blood-hunter",
+        "url_img": "https://www.mobafire.com/images/tft/set13/origin/icon/blood-hunter.png",
+        "breaks": [
+            1
+        ]
+    }
+]

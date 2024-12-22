@@ -9,10 +9,16 @@ class RouteDelUnit extends \Controllers\Router\Route {
     }
 
     public function get(array $params = array()) : void {
-        $this->controler->delUnit($params);
+        try {
+            $idUnit = parent::getParam($params, 'id', false);
+        } catch (\Exception $e) {
+            $this->controler->deleteUnitAndIndex(null, $e);
+            return;
+        }
+        $this->controler->deleteUnitAndIndex($idUnit);
     }
 
     public function post(array $params = array()) : void {
-        $this->controler->delUnit($params);
+        $this->controler->deleteUnitAndIndex(null, new \Exception("Method 'POST' not allowed"));
     }
 }

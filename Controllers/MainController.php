@@ -8,15 +8,20 @@ class MainController {
         $this->templates = $templates;
     }
 
-    public function index(array $params) : void {
+    public function index(?string $message = null) : void {
         $listUnits = (new \Models\UnitDAO())->getAll();
-        echo $this->templates->render('home', array_merge([
+        echo $this->templates->render('home', [
             'tftSetName' => 'Into the Arcane',
-            'listUnits' => $listUnits
-        ], $params));
+            'listUnits' => $listUnits,
+            'attributes' => (new \ReflectionClass(new \Models\Unit))->getProperties(\ReflectionProperty::IS_PRIVATE),
+            'message' => $message
+        ]);
     }
 
-    public function search(array $params) : void {
-        echo $this->templates->render('search', $params);
+    public function search(?string $message = null) : void {
+        echo $this->templates->render('search', [
+            'attributes' => (new \ReflectionClass(new \Models\Unit))->getProperties(\ReflectionProperty::IS_PRIVATE),
+            'message' => $message
+        ]);
     }
 }

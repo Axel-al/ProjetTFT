@@ -8,5 +8,11 @@
 tp*.pdf
 tp*.md
 
-# Ignore all JPG files in /public/img/
+# Ignore all image files in /public/img/
 /public/img/*.jpg
+/public/img/*.png
+
+# Do not ignore these image files
+!/public/img/search-icon.png
+!/public/img/edit-icon.png
+!/public/img/delete-icon.png

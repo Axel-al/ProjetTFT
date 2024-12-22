@@ -9,10 +9,10 @@ class RouteSearch extends \Controllers\Router\Route {
     }
 
     public function get(array $params = array()) : void {
-        $this->controler->search($params);
+        $this->controler->search();
     }
     
     public function post(array $params = array()) : void {
-        $this->controler->search($params);        
+        $this->controler->search();        
     }
 }

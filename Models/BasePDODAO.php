@@ -4,7 +4,7 @@ namespace Models;
 class BasePDODAO {
     private \PDO $db;
 
-    private function getDB() : \PDO {
+    protected function getDB() : \PDO {
         if (isset($this->db))
             return $this->db;
         $this->db = new \PDO(\Config\Config::get('dsn'), \Config\Config::get('user'), \Config\Config::get('pass'));
@@ -12,7 +12,7 @@ class BasePDODAO {
         return $this->db;
     }
 
-    protected function execRequest(string $sql, ?array $params = null) : \PDOStatement|false {
+    protected function execRequest(string $sql, ?array $params = null, ?\PDOException &$error = null) : \PDOStatement|false {
         try {
             $stmt = $this->getDB()->prepare($sql);
             
@@ -30,7 +30,9 @@ class BasePDODAO {
             $stmt->execute();
             return $stmt;
         } catch (\PDOException $e) {
-            echo "<!--Error during execRequest : " . $e . "-->";
+            if ($error !== null) {
+                $error = $e;
+            }
             return false;
         }
     }
